@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookself Submission | Nizar Fajri Amanah</title>
+        <link rel="stylesheet" href="Assets/style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1>RAK BUKU</h1>
+                <section>
+                    <form id="formSearchBook">
+                        <input type="text" name="" id="valueSearch" placeholder="Cari Buku (Judul)" />
+                        <button type="submit" class="buttonSearch"></button>
+                    </form>
+                </section>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="formPenambahan">
+                <form id="inputBuku">
+                    <h2>Formulir Penambahan Buku</h2>
+
+                    <label for="inputJudulBuku">Judul Buku</label>
+                    <input type="text" id="inputJudulBuku" required />
+
+                    <label for="inputPenulisBuku">Nama Penulis</label>
+                    <input type="text" id="inputPenulisBuku" required />
+
+                    <label for="inputTahunTerbit">Tahun Penerbitan</label>
+                    <input type="number" id="inputTahunTerbit" required />
+
+                    <span id="finalBeforeSubmit">
+                        <span>
+                            <input type="checkbox" id="inputStatusReading" />
+                            <label for="inputStatusReading">Buku Sudah Dibaca</label>
+                        </span>
+
+                        <button type="submit">Tambahkan Buku</button>
+                    </span>
+                </form>
+            </section>
+
+            <section id="bookself">
+                <article id="beforeRead">
+                    <h2>Buku Belum Dibaca</h2>
+
+                    <div id="booksBeforeReading">
+                    </div>
+                </article>
+
+                <article id="afterRead">
+                    <h2>Buku Sudah Dibaca</h2>
+
+                    <div id="booksAfterReading">
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer>Nizar Fajri Amanah - Dicoding Academy 2022</footer>
+
+        <section id="popupAll">
+            <article id="popup">
+                <h4>Notifikasi</h4>
+                <div id="popupContent">
+                    <p>Haloo Dunia!</p>
+                </div>
+                <div id="popupButton">
+                    <button id="buttonFalse">Tidak</button>
+                    <button id="buttonTrue">Ya</button>
+                </div>
+            </article>
+        </section>
+
+        <script src="Assets/script.js"></script>
+    </body>
+</html>

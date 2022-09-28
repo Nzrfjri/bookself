@@ -1,0 +1,303 @@
+* {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #39d7fe;
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+
+h1, h2, h3, p {
+    margin: 0.5rem 1rem;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large;
+}
+
+header {
+    display: inline;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    background-color: #008ca2;
+    color: white;
+    align-items: center;
+    padding: 0 1.5rem;
+    z-index: 1;
+}
+
+#formSearchBook {
+    display: flex;
+}
+
+#formSearchBook input, #formSearchBook button {
+    height: 1.8rem;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+
+#formSearchBook input {
+    width: 15rem;
+}
+
+#formSearchBook input:focus {
+    outline: solid white;
+    outline-offset: 3px;
+    margin: 0 0.5rem;
+}
+
+#formSearchBook input::placeholder {
+    font-style: italic;
+}
+
+#formSearchBook button:focus {
+    outline: solid white;
+    outline-offset: 3px;
+    margin: 0 1rem;
+}
+
+.buttonSearch {
+    display: block;
+    background-image: url(Image/search.svg);
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0.8rem;
+    margin: 0 0.5rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#formPenambahan {
+    width: 40vw;
+}
+
+#bookself {
+    width: 60vw;
+}
+
+#formPenambahan form {
+    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #bcd4f1;
+}
+
+form h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#formPenambahan label {
+    font-size: larger;
+}
+
+#inputJudulBuku, #inputPenulisBuku, #inputTahunTerbit {
+    display: block;
+    width: 95%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#finalBeforeSubmit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#formPenambahan button {
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0.5rem 0;
+    background-color: inherit;
+    font-size: large;
+    cursor: pointer;
+}
+
+#formPenambahan button:hover {
+    background-color: white;
+}
+
+#formPenambahan button:focus {
+    background-color: white;
+}
+
+#beforeRead, #afterRead {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0 0 1rem 1rem;
+    background-color: #bcd4f1;
+}
+
+.listBook {
+    display: flex;
+    justify-content: space-between;
+    border: 0.75px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+}
+
+.manyButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.listBook button {
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.buttonCompleatedReading {
+    background-image: url(Image/checkbox.svg);
+}
+
+.buttonUnCompleatedReading {
+    background-image: url(Image/undo.svg);
+}
+
+.buttonDeleteBook {
+    background-image: url(Image/trash.svg);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    padding: 1rem;
+    background-color: #39d7fe;
+}
+
+#popupAll {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    min-width: 20rem;
+    max-width: 75vw;
+    min-height: 5rem;
+}
+
+#popupAll h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#popupContent {
+    text-align: center;
+    background-color: rgba(80, 80, 80, 0.25);
+    margin: 1rem 0;
+    padding: 0.1rem;
+}
+
+#popupButton {
+    text-align: end;
+}
+
+#popupButton * {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+#buttonTrue {
+    background-color: red;
+    cursor: pointer;
+}
+
+#buttonFalse {
+    background-color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0.3rem 0.5rem;
+    }
+
+    #formSearchBook input {
+        /* display: none; */
+        width: 7.5rem;
+    }
+
+    main {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    #formPenambahan, #bookself {
+        width: 95%;
+        align-self: center;
+    }
+
+    #formPenambahan button {
+        position: static;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    #beforeRead, #afterRead {
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    #popup {
+        min-width: 60vw;
+        max-width: 80vw;
+    }
+}
